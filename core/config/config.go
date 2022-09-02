@@ -108,12 +108,12 @@ func InitConfig() *Specification {
 	}()
 	dat, err := ioutil.ReadFile("rtsp-stream.yml")
 	if err != nil {
-		logrus.Errorf("error: %v", err)
+		logrus.Errorf("error1: %v", err)
 		return &s
 	}
 	err = yaml.Unmarshal(dat, &setting)
 	if err != nil {
-		logrus.Errorf("error: %v", err)
+		logrus.Errorf("error2: %v", err)
 		return &s
 	}
 	return &s
